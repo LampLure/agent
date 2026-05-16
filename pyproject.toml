@@ -1,0 +1,24 @@
+[project]
+name = "repo-refactor-agent"
+version = "0.1.0"
+description = "A lightweight multi-agent style codebase refactoring assistant for demo and evaluation use."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "AI Agent Demo" }]
+license = { text = "MIT" }
+keywords = ["agent", "ai", "refactoring", "code-quality", "automation"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+]
+
+[project.scripts]
+repo-refactor-agent = "repo_refactor_agent.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
